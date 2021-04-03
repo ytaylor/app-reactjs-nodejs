@@ -1,13 +1,8 @@
 
 import React from "react";
 import {
-  Navbar,
-  Container,
-  InputGroup,
-  InputGroupText,
-  InputGroupAddon,
-  Input, Row,Col
-} from "reactstrap";
+  Navbar
+}  from 'reactstrap';
 
 
 import routes from "routes.js";
@@ -87,12 +82,6 @@ class Header extends React.Component {
       <Navbar
         color={ this.state.color}
         className={"navbar-absolute fixed-top navbar-transparent "}>
-          <form>
-              <InputGroup className="no-border"  center>
-                <Input size={1000}  placeholder="Filtra pokemons por nombre..." />
-                
-              </InputGroup>
-            </form> 
       </Navbar>
     );
   }
