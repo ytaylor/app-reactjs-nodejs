@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from "react-dom";
 import AdminLayout from "layouts/Admin.js";
 import { createBrowserHistory } from "history";

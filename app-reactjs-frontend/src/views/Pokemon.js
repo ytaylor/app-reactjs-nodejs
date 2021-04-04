@@ -1,13 +1,10 @@
 
 import React from "react";
 import {
-  Card, CardImg, CardText, CardBody, CardFooter,  Button,
-  CardHeader, Alert,
-  FormGroup,
-  Form,Table,
-  Input,
+  Card, CardImg,CardBody, 
+  CardHeader, 
   Row,
-  CardTitle, CardSubtitle, Container, Col, CardImgOverlay, Badge, ListGroupItem, ListGroup
+  CardTitle, Container, Col, ListGroupItem, ListGroup
 } from 'reactstrap';
 
 class Pokemon extends React.Component {
