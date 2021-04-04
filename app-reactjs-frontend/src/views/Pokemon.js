@@ -1,8 +1,13 @@
 
 import React from "react";
 import {
-  Card, CardImg, CardText, CardBody, CardFooter,
-  CardTitle, CardSubtitle, Button, Container, Row, Col, CardImgOverlay, Badge, ListGroupItem, ListGroup
+  Card, CardImg, CardText, CardBody, CardFooter,  Button,
+  CardHeader, Alert,
+  FormGroup,
+  Form,Table,
+  Input,
+  Row,
+  CardTitle, CardSubtitle, Container, Col, CardImgOverlay, Badge, ListGroupItem, ListGroup
 } from 'reactstrap';
 
 class Pokemon extends React.Component {
@@ -42,7 +47,7 @@ class Pokemon extends React.Component {
   render() {
     const { pokemon, fetched, loading } = this.state;
     let content;
-    let abilities =""; 
+    let abilities ="";
     let moves =""; 
     if (fetched) {
       {
@@ -55,24 +60,47 @@ class Pokemon extends React.Component {
       }
       content =
         <Container>
-          <Row  >
-            <Col>
-            <div className="bg-info clearfix"  style={{ padding: '.5rem', color:"white" }}>
-
-            <h3>
-            Pokemon: {pokemon.name} </h3>
-            <button onClick={this.goPokemonDetail} className="btn btn-secondary float-right">Volver al listado</button>
-            </div>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col >
-               <CardImg src={pokemon.sprites.front_default} alt="Card image" />
-            </Col>
-            <Col>
-
-             <ListGroup>
+                    <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Pokemon: {pokemon.name}</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Row>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardHeader>
+                          <CardTitle tag="h5">Imágenes</CardTitle>
+                        </CardHeader>
+                        <CardBody>
+                        <Row>
+                            <Col>
+                            <CardImg src={pokemon.sprites.front_default} alt="Card image" />
+                            </Col>
+                            <Col>
+                            <CardImg src={pokemon.sprites.back_default} alt="Card image" />
+                            </Col>
+                           
+                          </Row>
+                          <Row>
+                          <Col>
+                            <CardImg src={pokemon.sprites.back_shiny} alt="Card image" />
+                            </Col>
+                            <Col>
+                            <CardImg src={pokemon.sprites.front_shiny} alt="Card image" />
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardHeader>
+                          <CardTitle tag="h5">Información Relevante</CardTitle>
+                        </CardHeader>
+                        <CardBody>
+                        <ListGroup>
               <ListGroupItem className="justify-content-between">{"Peso: "+pokemon.weight/10 +" kg "}  </ListGroupItem>
               <ListGroupItem className="justify-content-between">{"Altura: " + pokemon.height/10 + " m"}  </ListGroupItem>
               <ListGroupItem className="justify-content-between">{"Habilidades: " + abilities}  </ListGroupItem>
@@ -81,11 +109,24 @@ class Pokemon extends React.Component {
 
             </ListGroup>
 
-          
-
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
+                </CardBody>
+              </Card>
             </Col>
-          
           </Row>
+         
+          <Row  >
+            <Col>
+            <div className="bg-info clearfix"  style={{ padding: '.5rem', color:"white" }}>
+            <button onClick={this.goPokemonDetail} className="btn btn-secondary float-right">Volver al listado</button>
+            </div>
+            </Col>
+          </Row>
+
+         
         </Container>
 
     }

@@ -44,6 +44,7 @@ export default class Pokemon extends Component {
       content =
 
         <Card className="pokemon--species--container" >
+          
             <CardBody>
             <CardImg  src={pokemon.sprites.front_default} alt="Card image" />
             <CardImgOverlay onClick={this.props.history}>
@@ -55,17 +56,13 @@ export default class Pokemon extends Component {
              <CardText>             {
                 pokemon.types.map((types, index) =>
                   <Badge color="dark" >{types.type.name}</Badge>)}
-           
            </CardText>
-
              {evolves.evolves_from_species != null ? <CardSubtitle tag="h6" className=" text-muted"> Evoluciona de {evolves.evolves_from_species.name} </CardSubtitle>: <CardSubtitle tag="h6" style={{color: 'white'}}>{" Evoluciona de"}</CardSubtitle>}
           </CardBody>
         </Card>
 ;
     }
-    else if (loading && !fetched) {
-      content = <p> Loading ...</p>;
-    }
+    
     else {
       content = <div />;
     }
