@@ -16,7 +16,7 @@ Después de descargar el repositorio para iniciar el proyecto ejecutar los sigui
 ### Backend
 El backend está desarrollado con NodeJs y Express y simula el api pública https://pokeapi.co/. En este caso solo se han desarrolllado los dos endpoints utilizados en la aplicación web, con la variación que en los endopoints que es necesario pasar información se ha utilizado un POST que espera los datos para procesar la información en el cuerpo de la solicitud. 
 
-![Alt text](pokemon-detail.png?raw=true "Pokemon Detail")
+![Alt text](llamada_postman.png?raw=true "Pokemon Detail")
 
 Después de descargar el repositorio para iniciar el proyecto ejecutar los siguientes comandos:
 
