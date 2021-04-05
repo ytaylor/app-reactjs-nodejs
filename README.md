@@ -22,4 +22,4 @@ Después de descargar el repositorio para iniciar el proyecto ejecutar los sigui
 
 - `cd api-nodejs-back`
 - `yarn install`
-- `node .bin/www`
+- `node bin/www`
