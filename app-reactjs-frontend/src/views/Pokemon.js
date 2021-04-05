@@ -47,14 +47,13 @@ class Pokemon extends React.Component {
     let abilities ="";
     let moves =""; 
     if (fetched) {
-      {
+
         pokemon.abilities.map((item, index)=>
-        abilities+= item.ability.name + ", ")
+        abilities+= item.ability.name + ", ");
 
         pokemon.moves.map((item, index)=>
-        moves+= item.move.name + ", ")
+        moves+= item.move.name + ", ");
         
-      }
       content =
         <Container>
                     <Row>

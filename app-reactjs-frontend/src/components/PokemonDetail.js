@@ -12,7 +12,6 @@ export default class Pokemon extends Component {
       pokemon: "",
       evolves: "",
       fetched: false,
-      loading: false,
     };
   }
 
@@ -29,7 +28,6 @@ export default class Pokemon extends Component {
             this.setState({
               evolves: response2,
               pokemon: response1,
-              loading: true,
               fetched: true,
             });
           });
@@ -38,7 +36,7 @@ export default class Pokemon extends Component {
   }
 
   render() {
-    const { fetched, loading, pokemon, evolves } = this.state;
+    const { fetched, pokemon, evolves } = this.state;
     let content;
     if (fetched) {
       content =
